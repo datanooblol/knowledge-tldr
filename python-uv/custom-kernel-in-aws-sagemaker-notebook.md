@@ -1,18 +1,23 @@
 # How to register your uv environment into jupyter lab in Sagemaker Instance  
 
-## Steps to follow:  
+## Setup uv project:  
 - install uv
 - initialize uv project structure, note: uv init -p python3.11 # specified python version is a-must
 - initialize project environment, uv run main.py # for the previous uv version hello.py
 - activate environment, in linux: . ./venv/bin/activate or source ./venv/bin/activate, in window powershell: ./venv/Scripts/activate.ps1
+- install ipykernel # mandatory
 
 ```cmd
 pip install uv  
 uv init -p python3.11
 . .venv/bin/activate
 uv add ipykernel
+```
+
+## Register to jupyter lab after activating environment  
+```cmd
 python -m ipykernel install --user --name myenv --display-name "uv-env"  
-```  
+```
 
 ## Test and Check your Kernel
 - open Jupyter Lab
