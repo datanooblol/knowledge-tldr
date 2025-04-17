@@ -22,7 +22,12 @@ python -m ipykernel install --user --name myenv --display-name "uv-env"
 ```python
 import sys
 print(sys.version) # it should return your sepcified python version in "uv init -p pythonX.XX"
-```  
+```
+
+## List all kernels in jupyter lab
+```cmd
+jupyter kernelspec list
+```
 
 ## Remove your kernel 
 - find your kernel variable based on the displayname # this is found in the register stage after --name
